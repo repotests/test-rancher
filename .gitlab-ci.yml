@@ -10,7 +10,7 @@ before_script:
 
 tests:
   script:
-    - python product_microservice/manage.py tests
+    - python product_microservice/manage.py test
 
 # runserver:
 #   script:
