@@ -20,7 +20,7 @@ integration-dev:
   - integravendas/api-gateway
 
   script:
-    - ls
+    - curl -I http://localhost:8000
 
 # runserver:
 #   script:
