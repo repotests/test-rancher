@@ -11,17 +11,3 @@ before_script:
 tests:
   script:
     - python product_microservice/manage.py test
-
-integration-dev:
-  services:
-  - integravendas/login-microservice
-  - integravendas/order-microservice
-  - integravendas/product-microservice
-  - integravendas/api-gateway
-
-  script:
-    - curl -I http://localhost:8000
-
-# runserver:
-#   script:
-#     - python product_microservice/manage.py runserver 0.0.0.0:8000
