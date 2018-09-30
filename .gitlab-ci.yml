@@ -1,5 +1,5 @@
 before_script:
-  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev pip
+  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev python-setuptools python-dev build-essential
   - which python
   - pip install -r requirements.txt
   - python product_microservice/manage.py makemigrations
@@ -9,6 +9,6 @@ tests:
   script:
     - python product_microservice/manage.py tests
 
-runserver:
-  script:
-    - python product_microservice/manage.py runserver 0.0.0.0:8000
+# runserver:
+#   script:
+#     - python product_microservice/manage.py runserver 0.0.0.0:8000
